@@ -1,17 +1,9 @@
 import os
 from pymongo import MongoClient
-from dotenv import load_dotenv
 
-load_dotenv()
+MONGO_URI = os.getenv("MONGO_URI")
 
-MONGO_URL = os.environ.get("MONGO_URL", "mongo")
-MONGO_USERNAME = os.environ.get("MONGO_USERNAME", "root")
-MONGO_PASSWORD = os.environ.get("MONGO_PASSWORD", "")
-MONGO_PORT = int(os.environ.get("MONGO_PORT", 27017))
+if not MONGO_URI:
+    raise RuntimeError("MONGO_URI environment variable is not set")
 
-mongo_client = MongoClient(
-    host=MONGO_URL,
-    username=MONGO_USERNAME,
-    password=MONGO_PASSWORD,
-    port=MONGO_PORT
-)
+mongo_client = MongoClient(MONGO_URI)

@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 import requests
 import os
-from dotenv import load_dotenv
 from flask_cors import CORS
 from mongo_client import mongo_client
 
@@ -10,8 +9,7 @@ gallery = mongo_client["gallery"]
 images_collection = gallery.images
 users_collection = gallery.users
 
-# Load env variables
-load_dotenv()
+
 
 ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 if not ACCESS_KEY:
@@ -78,4 +76,4 @@ def delete_image(id):
 # Run server
 # ----------------------
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5050, debug=True)
+    app.run(host="0.0.0.0", port=5050, debug=False)
