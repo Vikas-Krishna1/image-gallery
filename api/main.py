@@ -1,3 +1,5 @@
+# ----------------------
+# Imports
 from flask import Flask, request, jsonify
 import requests
 import os
@@ -10,15 +12,18 @@ images_collection = gallery.images
 users_collection = gallery.users
 
 
-
+## loads the ACCESS KEY for the Unsplash API 
+# from the environment variable
 ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 if not ACCESS_KEY:
-    raise RuntimeError("UNSPLASH_ACCESS_KEY is not set!")
+    raise RuntimeError("UNSPLASH_ACCESS_KEY is not set!") ##Error Handles
 
 UNSPLASH_URL = "https://api.unsplash.com/photos/random"
 
 app = Flask(__name__)
-
+##ENABLES CORS for the Flask application,
+#  allowing cross-origin requests from the frontend to the backend.
+#From the website 
 CORS(app)
   
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Navbar,Container } from 'react-bootstrap';
 import {ReactComponent as Logo} from '../images/logo.svg';
-
+//Header Component for rendering the 
+// navigation bar of the application 
+// with the logo and title.
 const NavBarStyle = {
   backgroundColor: " gold",
 
