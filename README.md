@@ -1,70 +1,130 @@
-🖼️ Image Gallery — Full-Stack Image Search & Save Platform
-Overview
+# Image Gallery 🖼️
 
-Image Gallery is a full-stack web application that allows users to search, save, and manage images using a custom API and third-party image services. The project emphasizes performance optimization and deployability.
+> A full-stack image search application with user authentication, powered by the Unsplash API.
 
-Live Demo
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-🔗 https://image-gallery-taeq-gl8kpbpo6-vikas-krishna1s-projects.vercel.app/
+## 🔗 Links
+- [Live Demo](your-live-demo-link)
+- [GitHub](your-github-link)
 
-Tech Stack
+---
 
-Frontend: React
+## Features
 
-Backend: Node.js, Express
+- 🔍 **Image Search** — Search millions of high-quality images via the Unsplash API
+- 👤 **User Authentication** — Register and log in to save your searches
+- 🐳 **Containerized** — Full-stack Docker Compose setup for consistent environments
+- ⚡ **Optimized Performance** — Production-grade Core Web Vitals scores
 
-Database: MongoDB
+---
 
-Containerization: Docker, Docker Compose
+## Performance
 
-Tools: Git
+Lighthouse scores on production deployment:
 
-Key Features
+| Category | Score |
+|----------|-------|
+| Performance | 100 |
+| Accessibility | 98 |
+| Best Practices | 100 |
+| SEO | 91 |
 
-Real-time image search using external APIs
+Core Web Vitals:
+- **FCP:** 0.3s
+- **LCP:** 0.6s
+- **CLS:** 0
 
-Save and manage user-selected images
+---
 
-RESTful backend for search and persistence
+## Tech Stack
 
-Fully containerized deployment
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React |
+| Backend | Node.js, Express |
+| Database | MongoDB |
+| Image API | Unsplash API |
+| Containerization | Docker, Docker Compose |
+| Frontend Deployment | Vercel |
+| Backend Deployment | Render |
 
-Performance Metrics
+---
 
-First Contentful Paint (FCP): 2.3s
+## Getting Started
 
-Largest Contentful Paint (LCP): 4.5s
+### Prerequisites
+- Node.js 18+
+- Docker & Docker Compose
+- Unsplash API key
+- MongoDB instance
 
-Cumulative Layout Shift (CLS): 0
+### Running with Docker (Recommended)
 
-Total Blocking Time: 310ms
+```bash
+# Clone the repository
+git clone https://github.com/vikaskrishna/image-gallery.git
+cd image-gallery
 
-Lighthouse Scores:
+# Set up environment variables
+cp .env.example .env
+# Add your API keys
 
-Performance: 91
+# Start with Docker Compose
+docker-compose up --build
+```
 
-Accessibility: 96
+### Running Locally
 
-Best Practices: 92
+```bash
+# Backend
+cd backend
+npm install
+npm run dev
 
-SEO: 72
+# Frontend (new terminal)
+cd frontend
+npm install
+npm start
+```
 
-Why This Project Matters
+---
 
-This project demonstrates:
+## Environment Variables
 
-Full-stack integration
+```env
+# Backend
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+UNSPLASH_ACCESS_KEY=your_unsplash_key
 
-Performance measurement and optimization
+# Frontend
+REACT_APP_API_URL=http://localhost:5000
+REACT_APP_UNSPLASH_KEY=your_unsplash_key
+```
 
-Containerized deployment practices
+---
 
-Real-world frontend/backend coordination
+## Project Structure
 
-Future Improvements
+```
+image-gallery/
+├── frontend/          # React application
+│   ├── src/
+│   │   ├── components/
+│   │   └── pages/
+├── backend/           # Node.js/Express API
+│   ├── routes/
+│   ├── models/
+│   └── server.js
+└── docker-compose.yml
+```
 
-Implement image caching strategies
+---
 
-Add pagination and lazy loading
+## Author
 
-Improve SEO optimization
+**Vikas Krishna** — [@vikaskrishna](https://github.com/vikaskrishna)
