@@ -127,4 +127,4 @@ image-gallery/
 
 ## Author
 
-**Vikas Krishna** — [@vikaskrishna](https://github.com/vikaskrishna)
+**Vikas Krishna** — [@vikaskrishna](https://github.com/Vikas-Krishna1)
